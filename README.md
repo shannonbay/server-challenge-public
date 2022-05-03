@@ -1,2 +1,2 @@
-# server-challenge-public
-Java programming homework challenges
+# server-challenge
+Client/Server challenge
