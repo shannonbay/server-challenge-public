@@ -99,12 +99,12 @@ public class WhenUsingServerMain {
 
     @Test // TODO #2: write this test and handle the failure somehow
     public void clientRespondsToKnockKnockIncorrectly(){
-
+        fail();
     }
 
     @Test // TODO #3: write this test and handle the failure somehow
     public void clientTimesOutAfterKnockKnock(){
-
+        fail();
     }
 
     /**
