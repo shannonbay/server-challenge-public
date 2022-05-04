@@ -11,7 +11,6 @@ import java.util.logging.Logger;
 public class ServerMain {
     private ServerSocket serverSocket;
 
-    // Boolean flag indicates if connection is currently being processed by a thread
     private ConcurrentLinkedDeque<Connection> connections = new ConcurrentLinkedDeque<>();
 
     private final ExecutorService executor = Executors.newFixedThreadPool(4); // Q1: Explain why 1 thread won't work

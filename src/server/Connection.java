@@ -14,6 +14,7 @@ class Connection implements Runnable {
     private Socket clientSocket;
     private Logger logger;
 
+    // State indicates if connection is currently being processed by a thread
     public AtomicReference<ConnState> state = new AtomicReference<>(ConnState.waiting);
 
     public Connection(Socket clientSocket, Logger logger) throws IOException {
