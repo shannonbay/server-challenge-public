@@ -24,3 +24,6 @@ hs_err_pid*
 
 # vi backups
 *~
+
+# Idea
+.idea/workspace.xml
