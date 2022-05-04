@@ -110,7 +110,7 @@ public class WhenUsingServerMain {
     /**
      * TODO #4: two clients send simultaneous count commands, but server processes them synchronously
      * leading to a timeout
-     * Update lines 69-70 of ServerMain.java
+     * Update lines 67-68 of ServerMain.java
     */
     @Test
     public void count() throws IOException, InterruptedException, TimeoutException, ExecutionException {
