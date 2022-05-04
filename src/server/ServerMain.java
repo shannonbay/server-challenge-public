@@ -27,6 +27,7 @@ public class ServerMain {
                 while (true) {
                     Connection c = new Connection(serverSocket.accept(), logger);
                     connections.offer(c);
+                    logger.info("Connection #" + connections.size() + " added");
                }
             } catch (IOException e) {
                 logger.severe("No longer accepting connections");
@@ -63,7 +64,7 @@ public class ServerMain {
                 for(final Connection c: connections) {
                     if(c.state.compareAndSet(Connection.ConnState.waiting, Connection.ConnState.running)) {
                         logger.finest("Processing connection " + c);
-                        // TODO #4 Run next two lines asynchronously to process multiple clients simultaneously
+                        // TODO #4 Run next three lines in a new thread to process multiple clients simultaneously
                         c.run();
                         c.state.compareAndSet(Connection.ConnState.running, Connection.ConnState.waiting);
                         logger.finest("Finished processing connection " + c);
